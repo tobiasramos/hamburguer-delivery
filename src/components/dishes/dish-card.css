@@ -1,0 +1,32 @@
+.container-dishCard {
+    margin-left: 60px;
+}
+
+.hamburguerImage {
+    margin-top: 48px;
+}
+
+.hamburgerDice .title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #4E4E4E;
+    margin-bottom: 11px;
+}
+
+.hamburgerDice .description {
+    width: 597px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4E4E4E;
+    margin-bottom: 11px;
+}
+
+.hamburgerDice .price {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.price .currentPrice {
+    color: #DC6E05;
+    margin-right: 17px;
+}
