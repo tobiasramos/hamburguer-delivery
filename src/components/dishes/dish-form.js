@@ -1,65 +1,28 @@
-import { React } from "react";
+import { React, useState } from "react";
 import './dish-form.css'
 import plus from '../img/icon-plus.png'
 import minus from '../img/icon-minus.png'
+import Input from "../input/input";
 
 const DishForm = () => {
+    const [num, setNum] = useState(0)
+    const additionalList = [
+        { label: "Queijo cheddar", amount: "4,99" },
+        { label: "Cebola crispy", amount: "1,50" },
+        { label: "Molho cheddar", amount: "3,50" },
+        { label: "Molho de picanha", amount: "3,50" }
+    ]
     return (
         <form className="form">
             <div className="warning">
                 <span>Adicionar Ingredientes</span>
                 <span>Até 8 ingredientes.</span>
             </div>
-            <div className="additional-container">
-                <div className="additional">
-                    <label>Queijo cheddar</label>
-                    <input value={"+ R$4,99"} />
-                </div>
-                <div className="buttonsPlusMinus">
-                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' />
-                    <div>0</div>
-                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade'></img>
-                </div>
-            </div>
-
-            <div className="additional-container">
-                <div className="additional">
-                    <label>Cebola crispy</label>
-                    <input value={"+ R$1,50"} />
-                </div>
-
-                <div className="buttonsPlusMinus">
-                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' />
-                    <div>0</div>
-                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade'></img>
-                </div>
-            </div>
-
-            <div className="additional-container">
-                <div className="additional">
-                    <label>Molho cheddar</label>
-                    <input value={"+ R$3,50"} />
-                </div>
-
-                <div className="buttonsPlusMinus">
-                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' />
-                    <div>0</div>
-                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade'></img>
-                </div>
-            </div>
-
-            <div className="additional-container">
-                <div className="additional">
-                    <label>Molho de picanha</label>
-                    <input value={"+ R$3,50"} />
-                </div>
-
-                <div className="buttonsPlusMinus">
-                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' />
-                    <div>0</div>
-                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade'></img>
-                </div>
-            </div>
+            <ul>
+                {additionalList.map((dish, index) => (
+                    <li key={index}><Input data={dish} /></li>
+                ))}
+            </ul>
 
             <div className="cutlery">
                 <span>Precisa de Talher?</span>
@@ -75,9 +38,13 @@ const DishForm = () => {
 
             <div className="buttons">
                 <div className="buttonsPlusMinus">
-                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' />
-                    <div>0</div>
-                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade'></img>
+                    <img src={minus} className="btn-minus" alt='Botão de diminuir a quantidade' onClick={() => {
+                        setNum(num - 1)
+                    }} />
+                    <div>{num}</div>
+                    <img src={plus} className="btn-plus" alt='Botão de aumentar a quantidade' onClick={() => {
+                        setNum(num + 1)
+                    }}></img>
                 </div>
                 <button className="btn-add">Adicionar</button>
             </div>
