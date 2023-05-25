@@ -30,3 +30,8 @@
     color: #DC6E05;
     margin-right: 17px;
 }
+
+.price .oldPrice {
+    color: #4E4E4E;
+    text-decoration: line-through;
+}
