@@ -4,27 +4,27 @@ const DishForm = () => {
     return (
         <form>
             <div>
-                <label></label>
+                <label>Queijo cheddar</label>
                 <input></input>
             </div>
 
             <div>
-                <label></label>
+                <label>Cebola crispy</label>
                 <input></input>
             </div>
 
             <div>
-                <label></label>
+                <label>Molho cheddar</label>
                 <input></input>
             </div>
 
             <div>
-                <label></label>
+                <label>Molho de picanha</label>
                 <input></input>
             </div>
 
             <div>
-                <label></label>
+                <label>Precisa de Talher?</label>
                 <input></input>
             </div>
 
