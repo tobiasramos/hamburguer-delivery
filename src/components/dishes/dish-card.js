@@ -2,22 +2,19 @@ import React from 'react';
 import hamburguer from '../img/hamburguer.png'
 import './dish-card.css'
 
-const DishCard = () => {
-
+const DishCard = (props) => {
     return (
-        <div className='container-dishCard'>
+        <div className='container-dishCard' >
             <img className='hamburguerImage' src={hamburguer} alt='Imagem do hamburguer' />
             <div className='hamburgerDice'>
-                <h2 className='title'>Oferta Picanha Cheddar Bacon</h2>
-                <p className='description'>Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, queijo cheddar,
-                    molho cheddar e pão mix de gergelim
-                </p>
+                <h2 className='title'>{props.data.title}</h2>
+                <p className='description'>{props.data.description}</p>
                 <div className='price'>
-                    <span className='currentPrice'>R$31,99</span>
-                    <span className='oldPrice'>R$34,95</span>
+                    <span className='currentPrice'>{props.data.currentPrice}</span>
+                    <span className='oldPrice'>{props.data.oldPrice}</span>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

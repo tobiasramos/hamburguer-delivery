@@ -8,7 +8,7 @@ const Input = (props) => {
                 <label>{props.data.label}</label>
                 <input type="text" value={"+ R$ " + props.data.amount} />
             </div>
-            <PlusMinusInput />
+            <PlusMinusInput data={props.data.qtd}/>
         </div>
     )
 }

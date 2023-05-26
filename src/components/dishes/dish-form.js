@@ -3,25 +3,19 @@ import './dish-form.css'
 import Input from "../input/input";
 import PlusMinusInput from "../plusMinusInput/plusMinusInput";
 
-const DishForm = () => {
-    const additionalList = [
-        { label: "Queijo cheddar", amount: "4,99" },
-        { label: "Cebola crispy", amount: "1,50" },
-        { label: "Molho cheddar", amount: "3,50" },
-        { label: "Molho de picanha", amount: "3,50" }
-    ]
-    const handleSubmit = () => {
-        alert("Funcionou")
+const DishForm = (props) => {
+    const handleSubmit = (data, event) => {
+        console.log(props)
     }
 
     return (
-        <form className="form">
+        <div className="form" >
             <div className="warning">
                 <span>Adicionar Ingredientes</span>
                 <span>Até 8 ingredientes.</span>
             </div>
             <ul>
-                {additionalList.map((dish, index) => (
+                {props.data.additionalList.map((dish, index) => (
                     <li key={index}><Input data={dish} /></li>
                 ))}
             </ul>
@@ -39,10 +33,10 @@ const DishForm = () => {
             </div>
 
             <div className="buttons">
-                <PlusMinusInput />
+                <PlusMinusInput data={props.data.silverware} onChange={handleSubmit } />
                 <button className="btn-add" onClick={handleSubmit}>Adicionar</button>
             </div>
-        </form>
+        </div>
     );
 }
 
