@@ -4,8 +4,15 @@
     justify-content: space-between;
 }
 
-@media(max-width: 375px) {
+@media(max-width: 720px) {
     .container {
-        display: block;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px) {
+    .container {
+       width: 343;
     }
 }
