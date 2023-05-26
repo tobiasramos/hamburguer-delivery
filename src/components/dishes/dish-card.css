@@ -35,3 +35,42 @@
     color: #4E4E4E;
     text-decoration: line-through;
 }
+
+@media(max-width: 375px) {
+    .container-dishCard {
+        width: 343px;
+        margin: auto auto;
+    }
+
+    .container-dishCard .hamburguerImage {
+        width: 300px;
+        height: 130px;
+        margin-left: 20px;
+    }
+
+    .container-dishCard .hamburgerDice {
+        width: 343px;
+    }
+
+    .hamburgerDice .title {
+        height: 38px;
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+
+    .hamburgerDice .description {
+        width: 330px;
+        height: 78px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .hamburgerDice .price {
+        margin-top: -25px;
+    }
+
+    .hamburgerDice .price .currentPrice,
+    .hamburgerDice .price .oldPrice {
+        font-size: 14px;
+    }
+}

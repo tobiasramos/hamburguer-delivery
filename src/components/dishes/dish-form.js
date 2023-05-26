@@ -21,7 +21,7 @@ const DishForm = (props) => {
             </ul>
 
             <div className="cutlery">
-                <span>Precisa de Talher?</span>
+                <span className="title">Precisa de Talher?</span>
                 <div className="yes">
                     <label for="yes">Sim</label>
                     <input type="radio" name="option" value={"sim"} />

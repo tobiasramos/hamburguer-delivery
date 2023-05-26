@@ -82,3 +82,17 @@
 .data button {
     color: #ED3237;
 }
+
+
+@media(max-width: 375px) {
+    .header .logo {
+        width: 99px;
+        height: 29px;
+        margin: auto auto;
+    }
+    .header .delivery,
+    .header .search,
+    .header .data {
+        display: none;
+    }
+}

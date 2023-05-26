@@ -109,3 +109,22 @@
 ul {
     list-style-type: none;
 }
+
+
+@media(max-width: 375px) {
+    .form {
+        width: 343px;
+        margin: auto auto;
+        font-size: 14px;
+        border: none;
+    }
+
+    .form .cutlery {
+        height: 65px;
+    }
+
+    .form .cutlery .yes {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
