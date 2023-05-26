@@ -83,8 +83,9 @@
     }
 
     .container-dishCard .hamburgerDice .description {
-        width: 400px;
+        width: 300px;
     }
+
 }
 
 
@@ -94,25 +95,25 @@
     }
 
     .container-dishCard .hamburguerImage {
-        width: 300px;
+        width: 320px;
         height: 130px;
-        margin-left: 20px;
+        margin-right: 30px;
     }
 
     .container-dishCard .hamburgerDice {
-        width: 300px;
-        padding: 3px;
+        width: 330px;
+        margin-left: -3px;
     }
 
-    .hamburgerDice .title {
+    .container-dishCard .hamburgerDice .title {
         height: 38px;
         font-size: 18px;
         margin-bottom: 0px;
     }
 
-    .hamburgerDice .description {
-        width: 90px;
-        height: 70px;
+    .container-dishCard .hamburgerDice .description {
+        width: 320px;
+        height: 78px;
         font-size: 16px;
         margin-bottom: 0px;
     }
