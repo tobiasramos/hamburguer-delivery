@@ -146,3 +146,48 @@ ul {
         margin-bottom: 5px;
     }
 }
+
+.popover-container {
+    position: relative;
+    display: block;
+}
+
+.popover {
+    position: absolute;
+    bottom: 20px;
+    right: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popover .title {
+    width: 208px;
+    height: 32px;
+    color: #fff;
+    padding: 5px;
+    background: #F09035;
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 12px;
+}
+
+.popover p,
+.popover span {
+    margin-left: 10px;
+}
+
+.popover p {
+    width: 186px;
+    height: 14px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #BC2E31;
+}
+
+.popover ul {
+    margin-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 5px;
+}

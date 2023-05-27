@@ -8,6 +8,12 @@ const DishForm = (props) => {
         console.log(props)
     }
 
+    const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+    const handleTogglePopover = () => {
+        setIsPopoverOpen(!isPopoverOpen);
+    };
+
     return (
         <div className="form" >
             <div className="warning">
@@ -31,10 +37,29 @@ const DishForm = (props) => {
                     <input type="radio" name="option" value={"não"} />
                 </div>
             </div>
+            
+            <div className="popover-container">
+                {isPopoverOpen && (
+                    <div className="popover">
+                        <h3 className="title">Título da Popover</h3>
+                        <p>Oferta Cheddar Bacon</p>
+                        <span>Ingredientes:</span>
+                        <ul>
+                            <li>1 Carne 250gr</li>
+                            <li>2 Queijo Cheddar</li>
+                            <li>1 Bacon</li>
+                            <li>Molho Especial</li>
+                        </ul>
+                    </div>
+                )}
 
+            </div>
             <div className="buttons">
-                <PlusMinusInput data={props.data.silverware} onChange={handleSubmit } />
-                <button className="btn-add" onClick={handleSubmit}>Adicionar</button>
+                <PlusMinusInput data={props.data.silverware} onChange={handleSubmit} />
+                <button className="btn-add" onClick={() => {
+                    handleTogglePopover();
+                    handleSubmit();
+                }}>Adicionar</button>
             </div>
         </div>
     );

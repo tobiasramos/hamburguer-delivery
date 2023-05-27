@@ -15,7 +15,7 @@ const Main = () => {
             { label: "Molho cheddar", amount: "3,50", qtd: 0 },
             { label: "Molho de picanha", amount: "3,50", qtd: 0 }
         ],
-        silverware: "0"
+        silverware: 0
     }
 
     return (
