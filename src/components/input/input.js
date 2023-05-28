@@ -1,14 +1,14 @@
 import React from "react";
 import PlusMinusInput from "../plusMinusInput/plusMinusInput";
 
-const Input = (props) => {
+const Input = ({ ingredient, handleIngredient }) => {
     return (
         <div className="additional-container">
             <div className="additional">
-                <label>{props.data.label}</label>
-                <input type="text" value={"+ R$ " + props.data.amount} />
+                <label>{ingredient.label}</label>
+                <input type="text" value={"+ R$ " + ingredient.amount} readOnly={true} />
             </div>
-            <PlusMinusInput data={props.data.qtd}/>
+            <PlusMinusInput name={ingredient.label} data={ingredient.qtd} handleIngredient={handleIngredient} />
         </div>
     )
 }

@@ -1,10 +1,10 @@
-import { React } from "react";
+import { React, useState } from "react";
 import './main.css'
 import DishCard from '../dishes/dish-card'
 import DishFom from '../dishes/dish-form'
 
 const Main = () => {
-    const dish = {
+    const dishTemplate = {
         title: "Oferta Picanha Cheddar Bacon",
         description: "Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, queijo cheddar, molho cheddar e pão mix de gergelim",
         currentPrice: "R$31,99",
@@ -15,13 +15,14 @@ const Main = () => {
             { label: "Molho cheddar", amount: "3,50", qtd: 0 },
             { label: "Molho de picanha", amount: "3,50", qtd: 0 }
         ],
-        silverware: 0
+        silverware: { label: "talher", amount: undefined, qtd: 0 }
     }
+    const [dish, setDish] = useState(dishTemplate)
 
     return (
         <div className="container">
             <DishCard data={dish} />
-            <DishFom data={dish} />
+            <DishFom dish={dish} setDish={setDish} />
         </div>
     );
 }
