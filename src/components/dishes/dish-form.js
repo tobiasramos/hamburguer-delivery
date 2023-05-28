@@ -4,9 +4,6 @@ import Input from "../input/input";
 import PlusMinusInput from "../plusMinusInput/plusMinusInput";
 
 const DishForm = ({ dish, setDish }) => {
-    const handleSubmit = (data, event) => {
-        console.log(dish)
-    }
     const handleIngredient = (name, qtd) => {
         const updatedAdditionalList = dish.additionalList.map((additional) => {
             if (additional.label === name) {
@@ -20,12 +17,20 @@ const DishForm = ({ dish, setDish }) => {
     const handleSilverware = (name, qtd) => {
         const updatedSilverware = { ...dish.silverware, qtd: qtd };
         setDish((prevDish) => ({ ...prevDish, silverware: updatedSilverware }));
+        console.log(updatedSilverware)
     };
 
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
     const handleTogglePopover = () => {
         setIsPopoverOpen(!isPopoverOpen);
+    };
+
+    const [display, setDisplay] = useState('none');
+    const [qtdPurchase, setQtdPurchase] = useState(0)
+    const handleQtdPurchase = () => {
+        if (!isPopoverOpen) setQtdPurchase(qtdPurchase + 1)
+        setDisplay('block');
     };
 
     return (
@@ -38,6 +43,7 @@ const DishForm = ({ dish, setDish }) => {
                 {dish.additionalList.map((d, index) => (
                     <li key={index}><Input ingredient={d} handleIngredient={handleIngredient} /></li>
                 ))}
+                <li></li>
             </ul>
 
             <div className="cutlery">
@@ -55,24 +61,28 @@ const DishForm = ({ dish, setDish }) => {
             <div className="popover-container">
                 {isPopoverOpen && (
                     <div className="popover">
-                        <h3 className="title">Título da Popover</h3>
+                        <h3 className="title">Adicionado com Sucesso</h3>
                         <p>Oferta Cheddar Bacon</p>
                         <span>Ingredientes:</span>
                         <ul>
                             {dish.additionalList.map((d, index) => (
                                 <li key={index}><span>{d.qtd}</span><span>{d.label}</span></li>
                             ))}
+                            <li><span>{dish.silverware.qtd}</span><span>{dish.silverware.label}</span></li>
                         </ul>
                     </div>
                 )}
 
             </div>
+
+            <div className="qtdPurchase" style={{ display: display }}>{qtdPurchase}</div>
+
             <div className="buttons">
                 <PlusMinusInput name={dish.silverware.label} data={dish.silverware.qtd}
                     handleIngredient={handleSilverware} />
                 <button className="btn-add" onClick={() => {
                     handleTogglePopover();
-                    handleSubmit();
+                    handleQtdPurchase()
                 }}>Adicionar</button>
             </div>
         </div>
