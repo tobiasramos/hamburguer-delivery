@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import plus from '../img/icon-plus.png'
 import minus from '../img/icon-minus.png'
+import './plusMinusInput.css'
 
 const PlusMinusInput = (props) => {
     const [num, setNum] = useState(props.data)
