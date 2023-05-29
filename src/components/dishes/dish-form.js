@@ -72,7 +72,6 @@ const DishForm = ({ dish, setDish }) => {
                         </ul>
                     </div>
                 )}
-
             </div>
 
             <div className="qtdPurchase" style={{ display: display }}>{qtdPurchase}</div>

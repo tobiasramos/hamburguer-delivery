@@ -22,8 +22,6 @@ const Header = () => {
                 <div>
                     <img className="cartImage" src={cartImage} /><button>Carrinho</button>
                 </div>
-
-
             </div>
         </header>
     );
