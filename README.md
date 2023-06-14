@@ -15,3 +15,5 @@ Esse projeto consiste em uma page que um determinado usuário vai comprar o seu 
  - CSS
  - JAVASCRIPT
  - REACTJS
+
+![tela](./tela.gif)
