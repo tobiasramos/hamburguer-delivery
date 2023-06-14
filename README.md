@@ -16,4 +16,5 @@ Esse projeto consiste em uma page que um determinado usuário vai comprar o seu 
  - JAVASCRIPT
  - REACTJS
 
+## Projeto em execução
 ![tela](./tela.gif)
