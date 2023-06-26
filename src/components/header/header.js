@@ -17,10 +17,10 @@ const Header = () => {
             </div>
             <div className="data">
                 <div className="userCircle">
-                    <img className="userImage" src={userImage} /><button>ENTRAR</button>
+                    <img className="userImage" src={userImage} alt="Foto do usuário"/><button>ENTRAR</button>
                 </div>
                 <div>
-                    <img className="cartImage" src={cartImage} /><button>Carrinho</button>
+                    <img className="cartImage" src={cartImage} alt="Logo do carinho de compras " /><button>Carrinho</button>
                 </div>
             </div>
         </header>
